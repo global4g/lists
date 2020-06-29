@@ -1,0 +1,12 @@
+application/json
+application/octet-stream
+application/xml
+application/x-www-form-urlencoded
+application/zip
+image/bmp
+image/gif
+image/jpeg
+image/png
+text/html
+text/plain
+text/xml
