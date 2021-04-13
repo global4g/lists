@@ -15,6 +15,9 @@
 /etc/fstab
 /etc/crontab
 /etc/exports
+/etc/hostname
+/etc/timezone
+/etc/debian_version
 
 
 /etc/ssh/ssh_config
